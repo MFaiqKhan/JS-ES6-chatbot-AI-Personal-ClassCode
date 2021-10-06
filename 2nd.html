@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Object data type in JS or called JSON(javascript object notation): (python have dictionary)
+
+        let student = {
+            name: "Faiq",
+            class: "2nd",
+            subject: "AI"
+        }
+
+         console.log('-----', student.name);
+
+         student.name = "Khan"
+         console.log('------', student.name);
+       
+
+         let num1 = 500;
+         let num2 = 6;
+
+         let result = num1 + num2
+         //console.log(result);
+
+         console.log('sum: ', num1 + num2);
+         console.log('subtraction: ', num1 - num2);
+         console.log('product: ', num1 * num2);
+         console.log('divide: ', Math.floor(num1 / num2));//floor round off to below , 
+         console.log('modulas: ', num1 % num2 );
+         
+
+        let a = 3;
+        let b = 5;
+        //console.log(a++);
+        //console.log(a);
+
+
+
+        //a++ , a-- return first after that it increment/decrement
+        //return: when the program/function/runtime starts it will first return the value then 
+        //play the process 
+        //IN JAVASCRIPT every character/value returns something FIRST, if there is nothing there
+        //then it will return undefined value.
+
+        //let b = 5 ( will return undefined but b = 5 will return 5 upon execute)
+
+         let c = a++ + b-- + --a + a++; //It will return 14.
+         console.log(c);
+        //JavaScript Operator Precedence(developer mozilla doc)
+        //jahan per variable decleration horhi hoti hai(as let krke) to vo wahan undefined 
+        //return krta hai
+        //or jahan sirf variable ko assign kara hua hota hai wahan wohi return krta hai.
+    </script>
+</body>
+</html>
