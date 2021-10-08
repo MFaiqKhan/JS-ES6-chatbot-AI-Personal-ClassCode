@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculater</title>
+</head>
+    <style>
+        body {
+            background: #bbab9b;
+            border-style: ridge;
+            border-color: #8b6f47;
+            border-width: 1em;
+            margin: 10em;
+            padding: 3em; 
+        }
+
+        main {
+            background: #d4ac6e;
+            margin: 2em;
+            padding: 6em;
+            font-size: larger;
+            font-style: oblique;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        #num1 {
+            background: #bbab9b;
+        }
+
+        #num2 {
+            background: #bbab9b;
+        }
+
+        div#result-div {
+            margin: 1em;
+            border-style: groove;
+            border-color: #8b6f47;
+            padding: 10px;
+            border-width: 20px;
+            text-transform: uppercase;
+            font-size: xx-large; 
+        }
+
+
+
+        button {
+            color: lightgray;
+            border: none;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            font-weight: bold;
+            width: 200px;
+            border-radius: 5px;
+            margin: 15px; 
+            cursor: pointer;
+        } 
+
+        #btn-1 {
+            background: #4f3222;
+        }
+
+        #btn-2 {
+            background: #4f3222;
+        }
+
+        #btn-3 {
+            background: #4f3222;
+        }
+
+        #btn-4 {
+            background: #4f3222;
+        }
+
+        #btn-5 {
+            background: #4f3222;
+        }
+
+        #btn-1:hover {background: #8b6f47}
+        #btn-2:hover {background: #8b6f47}
+        #btn-3:hover {background: #8b6f47}
+        #btn-4:hover {background: #8b6f47}
+        #btn-5:hover {background: #8b6f47}
+
+        #btn-1:active {
+            background-color: #674d3c;
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+        }
+        #btn-2:active {
+            background-color: #674d3c;
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+        }
+        #btn-3:active {
+            background-color: #674d3c;
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+        }
+        #btn-4:active {
+            background-color: #674d3c;
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+        }
+        #btn-5:active {
+            background-color: #674d3c;
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+        }
+    </style>
+<body>
+    <main>    
+        <h1>Simple Calculater</h1>
+        <div class="container">
+            Number1 = <input type="number" id="num1">
+            Number2 = <input type="number" id="num2"> <br><br>
+        </div>
+        <br>
+        <div id="btn-container">
+            <button onclick="Add()" id="btn-1">Sum</button>
+            <button onclick="Subtract()" id="btn-2">Subtract</button>
+            <button onclick="Product()" id="btn-3">Multiple</button>
+            <button onclick="Divide()" id="btn-4">Divide</button>
+            <button onclick="Modulas()" id="btn-5">Modulas</button>
+        </div>
+        <div id="result-div">
+            <span id="result-func">RESULT: </span>
+        </div>
+    </main>
+ 
+    <script>
+        let resultOn = document.getElementById("result-func")
+
+        function Add() {
+            let num1 = document.getElementById("num1").value;
+            let num2 = document.getElementById("num2").value;
+            
+            let result = Number(num1) + Number(num2)
+            resultOn.textContent = "RESULT:" + result
+            
+        } 
+        function Subtract() {
+            let num1 = document.getElementById("num1").value;
+            let num2 = document.getElementById("num2").value;
+
+            let result = Number(num1) - Number(num2)
+            resultOn.textContent = "RESULT:" + result
+            
+        }
+        function Product() {
+            let num1 = document.getElementById("num1").value;
+            let num2 = document.getElementById("num2").value;
+
+            let result = Number(num1) * Number(num2)
+            resultOn.textContent = "RESULT:" + result
+            
+        }
+        function Divide() {
+            let num1 = document.getElementById("num1").value;
+            let num2 = document.getElementById("num2").value;
+
+           let result = Number(num1) / Number(num2)
+           resultOn.textContent = "RESULT:" + result
+            
+        }
+        function Modulas() {
+            let num1 = document.getElementById("num1").value;
+            let num2 = document.getElementById("num2").value;
+
+            let result = Number(num1) % Number(num2)
+            resultOn.textContent = "RESULT:" + result
+            
+        }
+    </script>
+</body>
+</html>
