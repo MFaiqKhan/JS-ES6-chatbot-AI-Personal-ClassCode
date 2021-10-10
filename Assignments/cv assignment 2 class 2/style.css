@@ -345,20 +345,6 @@ ol a:before {
   margin: 0 1.5rem;
 }
 
-.fa-primary {
-  color: #ff7eee;
-}
-
-.fa-secondary {
-  color: #df49a6;
-}
-
-.fa-primary,
-.fa-secondary {
-  -webkit-transition: var(--transition-speed);
-  transition: var(--transition-speed);
-}
-
 .logo {
   font-weight: bold;
   text-transform: uppercase;
