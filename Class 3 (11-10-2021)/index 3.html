@@ -13,15 +13,31 @@
         let num2 = num1;
         num2 = 1;
 
-        // console.log("num1: ", num1);
-        // console.log("num2: ", num2);
+        //  console.log("num1: ", num1); // (i)
+        // console.log("num2: ", num2);  // (ii)
 
+        //----Here, above (i) will output 5 because In js strings and numbers are primitive data types and 
+        // In Js primitive values are pass by value, so num1 value is independent of num2 value because primitive 
+        //data types are copied.Primitive data types are passed, or copied, by value and are immutable, meaning that the existing value cannot be altered the way an array or an object can. we overwrote the value of num2 but num1 
+        //remains same.
+
+
+        
+        
+        
+
+        //------- Reference type Values are : objects, arrays and functions are passed by reference and point to a location in memory for the value, not the value itself.
+        
+
+        //---Below array Both a and b point to a (made up) address in memory which stores a reference to the object
+        //and both addresses are same.so they both will change if even one is change, but if we want to change then what?
+        // Then we have to change the address of the second and we can change it by applying the bracket with concat .
 
         /* let a = [2, 4, 6, 8];
-        let b = [].concat(a)
-        //let b = a;
+        let b = [].concat(a)   // so bracket will make b independent of a and create a new address in memory.
+        //let b = a;  
 
-        //let b = [...a]
+        //let b = [...a]  // This is the ES6 syntax for b = [].concat(a)
 
         console.log("a: ", a);
         console.log("b: ", b);
@@ -51,13 +67,16 @@
             subject : 'science',
         }*/
 
-        // let obj = Object.assign({}, student);
-        // let obj = { ...student }
+        //let obj = student;    
+
+        // let obj = Object.assign({}, student);  // this will make obj independent of student. and make a new address with a student object in obj
+
+        // let obj = { ...student }  // This is a ES6 syntax for assigning it.
 
         // console.log("student: ", student);
         // console.log("obj: ", obj);
 
-        // obj.name = "john";
+        // obj.name = "john";    
 
         // console.log("student: ", student);
         // console.log("obj: ", obj);
