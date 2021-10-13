@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //----------Ternary operator:------
+        //let x = (condition)? true : false;
+        // it returns the value if it's true or false,
+        // means on the run time the value on the 
+        //right side of the colon (:) will return if it's false and vice versa.
+        
+        let temp = 20;
+        let carryJacket = ((temp < 25) ? "do" : "do not") + " carry jacket";
+
+        console.log("carryJacket: ", carryJacket);
+
+        //same as below if else
+
+        // if (temp < 25) {
+        //     carryJacket = true;
+        // } else {
+        //     carryJacket = false;
+        // }
+
+
+       // Major difference in Ternary Operator and if else.
+        // 1.) It returns the value
+        // 2.) we can use it in inline means where the code of lines are greater
+
+        //if and else just plays the block of code not returns the value.
+
+        
+        // else if in ternary operator
+        //("condition1")? "A1 GRADE" : (("condition2")? "A Grade": "Below A grade");  
+        //In above example shows there is a 'else if' acting in ternary operator, if condition 1 is true then it
+        //outputs A1 grade if it is false then it goes to condition 2 and outputs if it is true or false.
+
+
+
+        //----------------variable-----hoisting-----------
+        // phase of a program when it's running, it reads the whole code of the program first 
+        // and declare some keywords first e.g, var, function keywords are registered first before running it reads all the code written and declare the var variables and 
+        //function keywords registered . 
+        //In variables hoisting only happens in javascript.
+        
+        console.log("a: ", a);
+        var a = 5;
+        console.log("a: ", a);
+
+
+
+
+        //User_xperience : apko usko seekhna na paray apko pehlay sai ata ho.
+        //e.g toyota's pedal are same in every toyota's car so we use it without looking down.
+        
+
+        //apps and web user experience:--------
+        //..color view / color pallete .
+
+
+    </script>
+</body>
+</html>
