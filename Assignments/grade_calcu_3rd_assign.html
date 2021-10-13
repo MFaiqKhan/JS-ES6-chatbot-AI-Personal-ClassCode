@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade Calculater</title>
+</head>
+<body>
+    Mathematics = <input type="number" id="maths">
+    Physics = <input type="number" id="phy">
+    Chemistry = <input type="number" id="chem">
+    Urdu = <input type="number" id="urd">
+    English = <input type="number" id="eng"><br><br>
+    <button id="result" onclick="calcufunc()">Result</button>
+    <script>
+       
+    function calcufunc() {
+        let num1 = document.getElementById("maths").value
+        let num2 = document.getElementById("phy").value
+        let num3 = document.getElementById("chem").value
+        let num4 = document.getElementById("urd").value
+        let num5 = document.getElementById("eng").value
+    
+       let totalnum =  Number(num1) + Number(num2) +  Number(num3) +  Number(num4) +  Number(num5)
+       let Total = ( totalnum * 100 )
+       let Per = Total / 500
+       
+        if(Per >= 85) {
+            alert("Grade A+")
+        } else if (Per <= 84 && Per >= 75) {
+            alert("Grade A")
+        } else if (Per <= 74 && Per >= 65) {
+            alert("Grade B")
+        } else if (Per <= 64 && Per >= 55) {
+            alert("Grade C")
+        } else if (Per >=45 && Per <= 54 ) {
+            alert("Grade D")
+        } else {
+            alert("Grade F, You Failed")
+        }
+    }
+    </script>
+</body>
+</html>
