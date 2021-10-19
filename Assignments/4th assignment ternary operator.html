@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ternary Operator</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .mark {
+            padding: 1em;
+            margin: 1.5em;
+        }
+        .main{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 2em;
+            padding: 1em;
+        }
+        .container2 {
+            margin: 2em;
+            padding: 1em;
+        }
+
+        .result {
+            margin: 1em;
+            padding: 2em;
+            width: 10em;
+            height: auto;
+        } 
+        span:first-child {
+            display: block;
+            text-shadow: 0 0 0.1em #c6c7c9, 0 0 0.2em black,  0 0 5em #165ff3;
+            -webkit-text-stroke: 0.06em rgba(black, 0.5);
+        }
+  
+        span:last-child {
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-image: linear-gradient(#032d50 25%, #00a1ef 35%, white 50%, #20125f 50%, #8313e7 55%, #ff61af 75%);
+            -webkit-text-stroke: 0.01em #94a0b9;
+            -webkit-text-fill-color: transparent;
+        }
+
+
+
+    </style>
+</head>
+<body>
+  <div class="main">
+    <div class="container">
+        <span><p>You Have to Score 51 or higher in Every Subject Otherwise you will Fail</p></span>
+        Maths <input type="number" class="mark" id="mark1"   >
+        Physics <input type="number" class="mark" id="mark2" >
+        Chemistry <input type="number" class="mark" id="mark3" >
+        Urdu <input type="number" class="mark" id="mark4" >
+        Islamiat <input type="number" class="mark" id="mark5" >
+        English <input type="number" class="mark" id="mark6" >
+    </div>
+    <div class="container2">
+        <button class="result">RESULT </button>
+    </div>
+  </div>
+    <script>
+ /*        var mark1 = document.getElementById("mark1").value;
+        var mark2 = document.getElementById("mark2").value;
+        var mark3 = document.getElementById("mark3").value;
+        var mark4 = document.getElementById("mark4").value;
+        var mark5 = document.getElementById("mark5").value;
+        var mark6 = document.getElementById("mark6").value;
+        
+        
+        (1) const total = Number(mark1) + Number(mark2) + Number(mark3) + Number(mark4) + Number(mark5) + Number(mark6)
+        console.log(total); 
+        var x = total >= 300? "You Passed" : "You Failed"
+        console.log(x);
+        //(1) will calculate total marks and then by ternary operator the condition( marks is less than 300 then fail or
+        vice versa)
+    */
+
+
+        //(2)let x = mark1 >= 51? ( mark2 >= 51? ( mark3 >= 51? ( mark4 >= 51? (mark5 >= 51? 
+        //(mark6 >= 51? "Congratulaton You Passed" : "Failed" ): "Failed") : "Failed" ) : "Failed" ) : "Failed" ):"Failed"
+     //(2) have nested ternary operators
+
+        //(3)let x = mark1 >= 51? "You Passed": (mark2 >= 60? "You Passed" : 
+        //(mark3 >= 70? "You Passed" : (mark4 >= 75? "You Passed" : (mark5 >= 80? "You Passed" : (mark6 >= 90? "You Passed" : "Failed" )))))
+        //(3) have else if in ternary operator form
+/* 
+
+        const result = document.getElementById('result')
+        ----------------------------------------------------------------------------------
+ */
+      
+ 
+        var mark1, mark2, mark3, mark4, mark5, mark6, x
+        const result = document.querySelector('.result')
+        //console.log(result);
+        
+        result.addEventListener('click',() =>{
+        //console.log(result.addEventListener);
+         mark1 = document.getElementById("mark1").value;
+         mark2 = document.getElementById("mark2").value;
+         mark3 = document.getElementById("mark3").value;
+         mark4 = document.getElementById("mark4").value;
+         mark5 = document.getElementById("mark5").value;
+         mark6 = document.getElementById("mark6").value;
+
+        let x = mark1 >= 51? ( mark2 >= 51? ( mark3 >= 51? ( mark4 >= 51? (mark5 >= 51? 
+        (mark6 >= 51? "Congratulaton You Passed" : "Failed" ): "Failed") : "Failed" ) : "Failed" ) : "Failed" ):"Failed" 
+ 
+        result.textContent = x
+        //console.log(result);
+        })
+    </script>
+</body>
+</html>
