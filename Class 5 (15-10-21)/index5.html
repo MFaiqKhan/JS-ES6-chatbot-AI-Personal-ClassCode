@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 5</title>
+</head>
+<body>
+    <script>
+        //----loop----
+        //aik hi kaam ko bar bar krna 
+        //Looping Statements;
+        //If we have to print, table of 2 then w have to write normal console and logging 
+        // for each one of the multiplier till 10 like below;
+        // console.log("2 X 1 = 2");
+        // console.log("2 X 2 = 4");
+        // console.log("2 X 3 = 6");
+        // console.log("2 X 4 = 8");
+        // console.log("2 X 5 = 10");
+        // console.log("2 X 6 = 12");
+        // console.log("2 X 7 = 14");
+        // console.log("2 X 8 = 16");
+        // console.log("2 X 9 = 18");
+        // console.log("2 X 10 = 20");
+
+        //but the above code lines are too much and hardcoded.
+
+
+        // for loop: 
+        //loop ka pehla box, second box, third box ,
+        //called initialization,condition checking, increment/decrement.
+
+/*         for (let i = 0; i < 10; i++) {
+            const num = i + 1;
+            console.log(`2 X ${num} = ${num * 2} `);
+           }*/
+
+    // every loop statement has been made for array., we can use all the arrays in a loop, wherever array will appear 
+    //every loo
+
+    let arr = [4, 3, 2, 4, 6, 3, 2, 21, 43, 2, 3]
+
+    /* for (let i = 0; i < arr.length; i++) {   //we startr loop from 0 because it is based on array and array is 0th indexed.
+        console.log("item: ", arr[i]);
+    } */
+
+    //The above loop code for array will print each item in array . 
+
+    //but 
+
+    //if we already know that it will start to iterate from 0th index and will increment then why are we writing so much code
+    //in loop. that's why we can use array map function to iterate, it works like loop.
+    //---map----
+    //in map we have a callback function.
+    //Map only works for finite number, but loops can easily be made infinite by inserting true hence crashing your browser.
+
+    /* arr.map((eachItem, index) => {
+        console.log(index ,".item: ", eachItem);
+    }) */
+     
+     //In above map function we have eachItem which is acting as a new copy array, and index which is the second arg, remember
+     //they could be anything like I can write my name instead of eachItem or index and it won't effect the outcome.
+
+     //eachItem arg here means that eachItem in the array will be input here as a Parameter and output will be through
+     //console or return 
+
+
+    /* let newArr = arr.map((eachItem, index) => {
+            console.log(index, ".item: ", eachItem);
+            return (eachItem % 2 === 0) ? 0 : eachItem;} 
+        ) */
+
+        //here we will receive the new copy array in a newArr variable, so we can output it as a console.log.
+        //If we don't call return here , all the items will be undefined.
+    
+ //-----------------------------------secb
+
+        //from section B: using for loop on 2d array to acces items
+
+        // const arr2d = [
+        //     [1, 2, 3],
+        //     [4, 5, 6],
+        //     [7, 8, 9]
+        // ]
+
+        // for (var i = 0; i < arr2d.length; i++) {
+
+        //     console.log("inside loop: ", arr2d[i])
+        //     var eachItem = arr2d[i]
+
+        //     for (var j = 0; j < eachItem.length; j++) {
+        //         console.log("inside nest: ", arr2d[i][j])
+        //     }
+        // }
+//--------------------------------------------------secb
+
+        let m1 = [
+            [3, 4, 6],
+            [5, 4, 6],
+            [5, 3, 2],
+        ]
+
+        m1.map((eachRow, i) => { //here I can omit the second parameter 'i' which is of literally no use here.
+            eachRow.map((eachRowItem) => {
+                console.log("eachRowItem: ", eachRowItem);
+            })
+        })
+
+        //In above we are printing the each Item from 2d array / nested array. here we have 3 arrays in a single array, 
+        //so first we call that single array with it's index
+        
+    // console.log("arr: ", arr)
+    // console.log("newArr: ", newArr)
+
+     
+    </script>
+</body>
+</html>
