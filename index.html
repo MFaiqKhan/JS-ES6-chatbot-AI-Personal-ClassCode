@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 8</title>
+</head>
+
+<body>
+    <script>
+        //function js mai jagah is wajah sai nai leta , because function ain't create a variable and in variable whole
+        //function is placed there, jahan per function kai naam arha ho wahan per vo function ko poora poora rakh raha hota hai, 
+        //function itself don't work, it's instance/copy is created and process and it destroy after the func is finished.
+        //after it is destroyed, and the copy takes space in memory, and then after it is destroyed the function memory is also cleared.
+        //pure function can be depend and accessed by it's args 
+        //impure function have external variable defined. impurity can be made by requesting a data from the internet etc.
+        //server side code is very critical, as server is running differenty in different pc at different time, so
+        //performance do a number on server, overall all the user using server effect the performance of the server, so don't write the extra code you don't need.
+        //pure function can be predicted by their defined parameters.
+
+        //four ways to write a func in js;
+
+        // named function syntax : function myFunction(){}     //It have hoisting perform.
+
+        // anonymouse function :    It should be declared by a variable or be called in an instant, if don't it will
+        // not be accessible.  let func = function(){}
+
+        // arrow func:    let func = () => {}
+
+        //arrow func with no body just return :   const func = (a,b) => (a,b);
+
+//---------------------------------------------------------------------------------//-------------
+
+
+        let returnVal1 = getAvg(12, 45, 23);
+
+
+        function getAvg(val1, val2, val3) {
+            console.log("This is Class 8 10/29/2021")
+
+            let sum = val1 + val2 + val3
+
+            let result = sum / 3;
+
+            return result
+        }
+        let returnVal2 = getAvg(03, 35, 63);
+
+        // console.log("returnVal: ", returnVal);
+  
+    </script>
+</body>
+
+</html>
