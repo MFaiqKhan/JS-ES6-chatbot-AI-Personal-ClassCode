@@ -1,7 +1,7 @@
 import express from "express";
 
 const app = express();
-const port = process.env.PORT || 3000 
+const Port = process.env.Port || 3000 
 
 app.get('/home', (req,res) => {
     res.send('Welcome to my server, Mr Faiq khan');
@@ -16,7 +16,7 @@ app.get('/', (req,res) => {
     res.send('<h1> Hello Heroku -- Navigate to Home, about or contact pls </h1>');
 })
 
-app.listen(port,() => {
+app.listen(Port,() => {
     console.log(`The port is running on ${port}`);
 });
 
