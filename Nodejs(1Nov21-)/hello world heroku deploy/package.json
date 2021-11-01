@@ -1,10 +1,10 @@
 {
-  "name": "nothh",
+  "name": "hello-world-heroku-deploy",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
-    "start": "node app.mjs",
+    "start": "node firstserver.mjs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
