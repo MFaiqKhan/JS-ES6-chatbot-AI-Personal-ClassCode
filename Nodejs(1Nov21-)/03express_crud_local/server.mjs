@@ -42,7 +42,7 @@ app.get('/user/:id', (req,res) => {
     if(users[req.params.id]) {
         res.send(users[req.params.id])
     } else {
-        res.send('user not found')
+        res.status(404).send('user not found')
     }
 })
 
@@ -55,7 +55,7 @@ app.post('/user', (req,res) => {
     } else {
         users.push({
             name: req.body.name,
-            email: req.body.emai,
+            email: req.body.email,
             address: req.body.address
         })
 
