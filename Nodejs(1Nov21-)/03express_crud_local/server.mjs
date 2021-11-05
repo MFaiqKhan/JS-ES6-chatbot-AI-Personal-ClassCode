@@ -38,7 +38,11 @@ app.get('/users', (req,res) => {
 //if he asks of '/user/:id(we will actually consider id as a number here), then we get id, so actually we are requesting if here of a user by parameters,
 // req.params.id () Requesting the value 'id' using parameter(params))
 //so in this code, it is checking in a certain users index does id exist ? if it exist it will give us a response(sending us user) if not then 'else' will executed
+//we will be getting a request of "localhost:3000/user/id" (when writing id we won't include the double dots in the url), 
+//id should start from 0 as it is indicating as an array index here, so first user info will be of id 0, 
+//so when getting that desired user we will be do a get input of localhost:3000/user/0
 app.get('/user/:id', (req,res) => {
+    console.log(req.params.id);
     if(users[req.params.id]) {
         res.send(users[req.params.id])
     } else {
@@ -109,3 +113,5 @@ app.listen(port, () => {
     console.log(`app listening at http://localhost:${port}`)
 })
 
+
+//If we restart the server, the data will be deleted / so be cautious when using nodemon, that you don't accidentally save, or it will not work.
