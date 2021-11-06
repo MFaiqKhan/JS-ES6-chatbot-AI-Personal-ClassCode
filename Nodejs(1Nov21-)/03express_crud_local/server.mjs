@@ -1,6 +1,7 @@
 //node class 3 (4-11-21)
 import express from "express";
 import morgan from "morgan";
+import cors from "cors";
 
 // calling express()  which is the main function of the express module from express module and storing it in a variable
 const app = express();
@@ -8,12 +9,15 @@ const app = express();
 // means: whatever is in the environment variable PORT, or 3000 if there's nothing there.
 //environment variable is saved in environment which is typicalle secret path, 
 //so only people who have access can see what is in the environment variable of certain type.
-const port = process.env.PORT || 3000
+const port = process.env.PORT || 5000
 
 let users = [];
 //.use is a middleware, acts like a pipeline, and request enters from very first middleware(.use) and then downwards to other(.use)
 app.use(express.json()) //If body is in json (In restful api body is in json), it will return in json 
 app.use(morgan('short')) //every incoming request to be logged, short will log out some values which can be read in npm docs
+app.use(cors()) //cors will allow us to cross origin requests and response
+
+
 
 //Middlewares are functions.
 //Below is a function written by hand in a middleware, having 3 parameters, 
